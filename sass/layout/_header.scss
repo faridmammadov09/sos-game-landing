@@ -1,0 +1,123 @@
+.header {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #ffffff;
+
+  .logo {
+    height: 30px;
+    width: 30px;
+
+    img {
+      width: 100%;
+    }
+
+    @include breakpoint(small) {
+      height: 55px;
+      width: 55px;
+    }
+  }
+
+  .nav {
+    display: none;
+
+    ul {
+      display: flex;
+    }
+
+    .nav-item {
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+
+    .nav-link {
+      font-weight: bold;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      transition: color 200ms ease;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+
+    @include breakpoint(large) {
+      display: block;
+    }
+  }
+
+  .right-side {
+    display: flex;
+    align-items: center;
+
+    .language-dropdown {
+      width: 50px;
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      #dropdownMenuButton {
+        font-size: 1.2rem;
+        border: none;
+        background-color: transparent;
+        color: #ffffff;
+        font-weight: bold;
+        margin-right: 6px;
+        width: 25px;
+      }
+      .dropdown-menu {
+        font-size: 1.2rem;
+        border-radius: 5px;
+        position: absolute;
+        top: 30px;
+        background-color: rgba($color: #000000, $alpha: 0.75);
+        display: none;
+
+        a {
+          padding: 10px;
+          display: block;
+          transition: color 200ms ease;
+
+          &:hover {
+            color: $primary-color;
+          }
+        }
+
+        &.active {
+          display: block;
+        }
+      }
+    }
+
+    .divider {
+      height: 30px;
+      width: 1px;
+      background-color: rgba($color: #fff, $alpha: 0.75);
+      margin-right: 10px;
+    }
+
+    .menu-icon {
+      cursor: pointer;
+
+      @include breakpoint(small) {
+        display: none;
+      }
+    }
+
+    .download-links {
+      display: none;
+
+      @include breakpoint(small) {
+        display: flex;
+
+        a {
+          &:not(:last-child) {
+            margin-right: 17px;
+          }
+        }
+      }
+    }
+  }
+}
