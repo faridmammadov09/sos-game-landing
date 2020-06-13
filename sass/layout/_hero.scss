@@ -1,6 +1,7 @@
 .hero {
   height: 100vh;
-  background: url("/images/hero-bg.jpg") center bottom/cover no-repeat fixed;
+  background: url("/images/hero-bg.jpg") center bottom/cover no-repeat;
+  padding: 0;
 
   .container {
     height: 100%;

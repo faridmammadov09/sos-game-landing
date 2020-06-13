@@ -1,0 +1,151 @@
+.about {
+  background: url("/images/about-bg.jpg") left top/cover no-repeat;
+
+  .container {
+    @include breakpoint(medium) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &-content {
+    @include breakpoint(medium) {
+      flex: 1;
+    }
+  }
+
+  .section-title {
+    position: relative;
+    h2 {
+      max-width: 190px;
+
+      @include breakpoint(large) {
+        max-width: 410px;
+      }
+    }
+  }
+
+  .vertical-line {
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    margin: 20px 0;
+    border-radius: 4px;
+
+    @include breakpoint(large) {
+      position: absolute;
+      width: 750px;
+      z-index: 1;
+      bottom: -20px;
+    }
+  }
+
+  .text-wrapper {
+    @include breakpoint(large) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+      height: 300px;
+    }
+  }
+
+  &__text {
+    max-width: 364px;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    text-align: justify;
+
+    @include breakpoint(medium) {
+      font-size: 1.8rem;
+    }
+
+    span {
+      position: relative;
+      z-index: 1;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 4px;
+        width: 100%;
+        background-color: $primary-color;
+        z-index: -1;
+
+        @include breakpoint(medium) {
+          height: 6px;
+        }
+      }
+    }
+  }
+
+  .gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 50px;
+
+    @include breakpoint(medium) {
+      flex: 1;
+    }
+
+    &-image {
+      border-radius: 5px;
+      overflow: hidden;
+      width: 250px;
+
+      @include breakpoint(medium) {
+        width: 80%;
+      }
+
+      img {
+        height: 300px;
+        width: 100%;
+        object-fit: cover;
+
+        @include breakpoint(medium) {
+          height: 500px;
+        }
+      }
+    }
+
+    &-button {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      width: 14px;
+
+      img {
+        outline: none;
+        width: 100%;
+      }
+    }
+
+    &-nav {
+      display: flex;
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translate(-50%);
+
+      .bullet {
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+
+        &.tns-nav-active {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}
