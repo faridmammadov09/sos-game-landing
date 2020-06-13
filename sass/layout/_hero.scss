@@ -1,5 +1,98 @@
 .hero {
   height: 100vh;
-  background: url("/images/hero-bg.jpg") center bottom/cover no-repeat fixed
-    $dark-color;
+  background: url("/images/hero-bg.jpg") center bottom/cover no-repeat fixed;
+
+  .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .title {
+    font-size: 3.3rem;
+    letter-spacing: 3px;
+    margin: 0;
+
+    @include breakpoint(medium) {
+      font-size: 8rem;
+    }
+  }
+
+  .subtitle {
+    font-family: $heading-font;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 10px auto;
+    max-width: 240px;
+
+    @include breakpoint(medium) {
+      font-size: 2.4rem;
+      max-width: initial;
+    }
+  }
+
+  .btn {
+    &-text {
+      padding-right: 10px;
+    }
+    .price {
+      border-left: 1px solid $dark-color;
+      padding-left: 10px;
+    }
+
+    &:hover {
+      background-color: $dark-color;
+      color: $primary-color;
+    }
+  }
+
+  .hero-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    @include breakpoint(medium) {
+      justify-content: center;
+    }
+
+    a {
+      display: flex;
+      flex-direction: column;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      font-weight: bold;
+
+      img {
+        margin-top: 10px;
+      }
+    }
+    .hero-bullets {
+      display: flex;
+      align-items: center;
+
+      @include breakpoint(medium) {
+        display: none;
+      }
+
+      .bullet {
+        height: 10px;
+        width: 10px;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        margin-right: 10px;
+
+        &--active {
+          background-color: #fff;
+        }
+      }
+    }
+  }
 }
