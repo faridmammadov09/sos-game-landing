@@ -61,7 +61,12 @@ a {
 }
 
 section {
+  min-height: 100vh;
   padding: 20px 0;
+}
+
+.section-title {
+  margin-bottom: 20px;
 }
 
 .section-title div {
@@ -747,6 +752,8 @@ body {
 
 .about {
   background: url("/images/about-bg.jpg") left top/cover no-repeat;
+  -webkit-box-shadow: inset 0px 100px 55px 1px black, inset 0px -70px 100px 1px black;
+          box-shadow: inset 0px 100px 55px 1px black, inset 0px -70px 100px 1px black;
 }
 
 @media screen and (min-width: 768px) {
@@ -938,5 +945,91 @@ body {
 
 .about .gallery-nav .bullet.tns-nav-active {
   background-color: #fff;
+}
+
+.features {
+  background: url("/images/features-bg-mobile.jpg") left top/cover no-repeat;
+  position: relative;
+  -webkit-box-shadow: inset 0px 100px 55px 1px black, inset 0px -70px 100px 1px black;
+          box-shadow: inset 0px 100px 55px 1px black, inset 0px -70px 100px 1px black;
+}
+
+@media screen and (min-width: 576px) {
+  .features {
+    background: url("/images/features-bg-desktop.jpg") 60% top/cover no-repeat;
+  }
+}
+
+.features .features-content {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+@media screen and (min-width: 768px) {
+  .features .features-content {
+    top: 60%;
+    right: 100px;
+  }
+}
+
+.features .feature-title {
+  font-size: 2.1rem;
+  color: #ffb548;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .features .feature-title {
+    font-size: 3.6rem;
+  }
+}
+
+.features .feature-title::before {
+  content: "";
+  height: 14px;
+  width: 14px;
+  border: 2px solid #fff;
+  background-color: #080a0b;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: -30px;
+}
+
+.features .feature-title--active::before {
+  background-color: #fff;
+}
+
+.features .feature-title--active::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: -22.5px;
+  background-color: #fff;
+  height: 135px;
+  width: 2px;
+  z-index: -1;
+}
+
+.features .feature-subtitle {
+  font-size: 1.4rem;
+  text-align: justify;
+  max-width: 175px;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .features .feature-subtitle {
+    font-size: 1.8rem;
+    max-width: 362px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

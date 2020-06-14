@@ -1,5 +1,7 @@
 .about {
   background: url("/images/about-bg.jpg") left top/cover no-repeat;
+  box-shadow: inset 0px 100px 55px 1px rgba(0, 0, 0, 1),
+    inset 0px -70px 100px 1px rgba(0, 0, 0, 1);
 
   .container {
     @include breakpoint(medium) {
