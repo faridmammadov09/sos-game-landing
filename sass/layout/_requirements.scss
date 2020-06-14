@@ -1,0 +1,53 @@
+.requirements {
+  background: url("/images/requirements-bg-mobile.jpg") center center / cover
+    no-repeat;
+
+  @include breakpoint(medium) {
+    background: url("/images/requirements-bg-desktop.jpg") center 15% / contain
+      no-repeat;
+  }
+
+  .section-title {
+    text-align: center;
+  }
+
+  &-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+
+    @include breakpoint(medium) {
+      max-width: 570px;
+      margin-top: 100px;
+    }
+
+    > div {
+      border: 0.25px solid #979797;
+      padding: 20px;
+    }
+
+    > div:last-child {
+      grid-column: 1 / span 2;
+    }
+  }
+
+  .requirement-title {
+    font-family: $heading-font;
+    color: $primary-color;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 3px;
+
+    @include breakpoint(medium) {
+      font-size: 2.4rem;
+    }
+  }
+
+  .requirement-text {
+    font-size: 1.4rem;
+
+    @include breakpoint(medium) {
+      font-size: 1.8rem;
+    }
+  }
+}

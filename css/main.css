@@ -62,7 +62,13 @@ a {
 
 section {
   min-height: 100vh;
-  padding: 20px 0;
+  padding: 40px 0;
+}
+
+@media screen and (min-width: 768px) {
+  section {
+    padding: 100px 0;
+  }
 }
 
 .section-title {
@@ -1030,6 +1036,71 @@ body {
   .features .feature-subtitle {
     font-size: 1.8rem;
     max-width: 362px;
+  }
+}
+
+.requirements {
+  background: url("/images/requirements-bg-mobile.jpg") center center/cover no-repeat;
+}
+
+@media screen and (min-width: 768px) {
+  .requirements {
+    background: url("/images/requirements-bg-desktop.jpg") center 15%/contain no-repeat;
+  }
+}
+
+.requirements .section-title {
+  text-align: center;
+}
+
+.requirements-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+}
+
+@media screen and (min-width: 768px) {
+  .requirements-grid {
+    max-width: 570px;
+    margin-top: 100px;
+  }
+}
+
+.requirements-grid > div {
+  border: 0.25px solid #979797;
+  padding: 20px;
+}
+
+.requirements-grid > div:last-child {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / span 2;
+}
+
+.requirements .requirement-title {
+  font-family: "BebasNeue", sans-serif;
+  color: #ffb548;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  margin-bottom: 3px;
+}
+
+@media screen and (min-width: 768px) {
+  .requirements .requirement-title {
+    font-size: 2.4rem;
+  }
+}
+
+.requirements .requirement-text {
+  font-size: 1.4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .requirements .requirement-text {
+    font-size: 1.8rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
