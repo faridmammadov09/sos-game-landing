@@ -47,7 +47,7 @@ a {
   width: 216px;
   color: #1a1917;
   font-weight: bold;
-  border-radius: 4px;
+  border-radius: 3px;
   -webkit-transition: all 200ms ease;
   transition: all 200ms ease;
 }
@@ -62,6 +62,20 @@ a {
     height: 60px;
     width: 260px;
     font-size: 1.6rem;
+  }
+}
+
+input {
+  height: 44px;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+}
+
+@media screen and (min-width: 768px) {
+  input {
+    height: 60px;
   }
 }
 
@@ -1292,6 +1306,118 @@ body {
   .quotes .testimonials .testimonial:nth-child(2) {
     -webkit-transform: translateX(-140px);
             transform: translateX(-140px);
+  }
+}
+
+.subscribe {
+  background: url("/images/subscribe-bg-mobile.jpg") left top/150px no-repeat;
+}
+
+@media screen and (min-width: 768px) {
+  .subscribe {
+    background: url("/images/subscribe-bg-desktop.jpg") 10% top/400px no-repeat;
+  }
+}
+
+.subscribe__text {
+  padding-left: 120px;
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .subscribe__text {
+    padding-left: 0;
+    max-width: 660px;
+    margin-left: auto;
+  }
+}
+
+.subscribe__text p {
+  font-size: 1.4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .subscribe__text p {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .subscribe__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 660px;
+    margin-left: auto;
+  }
+}
+
+.subscribe__form .email-wrapper {
+  position: relative;
+}
+
+.subscribe__form .email-wrapper::after {
+  content: "Your email address";
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .subscribe__form .email-wrapper::after {
+    font-size: 1.4rem;
+    top: 7px;
+    left: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .subscribe__form .email-wrapper {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    margin-right: 20px;
+  }
+}
+
+.subscribe__form .input-email {
+  background-color: #1a1917;
+  color: #ffb548;
+  padding: 12px 10px 0;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .subscribe__form .input-email {
+    margin-bottom: 0;
+    font-size: 1.8rem;
+    padding: 10px 20px 0;
+  }
+}
+
+.subscribe__form .input-submit {
+  background-color: #ffb548;
+  font-size: 1.4rem;
+  font-weight: bold;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  cursor: pointer;
+}
+
+.subscribe__form .input-submit:hover {
+  background-color: #1a1917;
+  color: #ffb548;
+}
+
+@media screen and (min-width: 768px) {
+  .subscribe__form .input-submit {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    font-size: 1.6rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

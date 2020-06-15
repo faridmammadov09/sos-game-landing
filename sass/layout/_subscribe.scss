@@ -1,0 +1,89 @@
+.subscribe {
+  background: url("/images/subscribe-bg-mobile.jpg") left top / 150px no-repeat;
+
+  @include breakpoint(medium) {
+    background: url("/images/subscribe-bg-desktop.jpg") 10% top / 400px
+      no-repeat;
+  }
+
+  &__text {
+    padding-left: 120px;
+    margin-bottom: 50px;
+
+    @include breakpoint(medium) {
+      padding-left: 0;
+      max-width: 660px;
+      margin-left: auto;
+    }
+
+    p {
+      font-size: 1.4rem;
+
+      @include breakpoint(medium) {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  &__form {
+    @include breakpoint(medium) {
+      display: flex;
+      max-width: 660px;
+      margin-left: auto;
+    }
+
+    .email-wrapper {
+      position: relative;
+      &::after {
+        content: "Your email address";
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        color: rgba($color: #fff, $alpha: 0.5);
+        font-size: 1.2rem;
+
+        @include breakpoint(medium) {
+          font-size: 1.4rem;
+          top: 7px;
+          left: 20px;
+        }
+      }
+      @include breakpoint(medium) {
+        flex: 1;
+        margin-right: 20px;
+      }
+    }
+
+    .input-email {
+      background-color: $dark-color;
+      color: $primary-color;
+      padding: 12px 10px 0;
+      margin-bottom: 20px;
+      font-size: 1.4rem;
+
+      @include breakpoint(medium) {
+        margin-bottom: 0;
+        font-size: 1.8rem;
+        padding: 10px 20px 0;
+      }
+    }
+
+    .input-submit {
+      background-color: $primary-color;
+      font-size: 1.4rem;
+      font-weight: bold;
+      transition: all 200ms ease;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $dark-color;
+        color: $primary-color;
+      }
+
+      @include breakpoint(medium) {
+        flex: 1;
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
