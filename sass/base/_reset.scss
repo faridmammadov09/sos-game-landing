@@ -44,6 +44,11 @@ a {
   border-radius: 4px;
   transition: all 200ms ease;
 
+  &:hover {
+    background-color: $dark-color;
+    color: $primary-color;
+  }
+
   @include breakpoint(medium) {
     height: 60px;
     width: 260px;

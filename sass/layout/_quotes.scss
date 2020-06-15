@@ -1,0 +1,148 @@
+.quotes {
+  .container {
+    @include breakpoint(large) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &-header {
+    @include breakpoint(large) {
+      flex: 1;
+      margin-right: 170px;
+    }
+
+    p {
+      font-size: 1.4rem;
+      margin-bottom: 24px;
+
+      @include breakpoint(large) {
+        font-size: 1.8rem;
+        max-width: 435px;
+      }
+    }
+
+    .btn {
+      display: flex;
+      margin: 0 auto;
+
+      @include breakpoint(large) {
+        display: inline-flex;
+      }
+    }
+  }
+
+  .testimonials {
+    margin-top: 30px;
+
+    @include breakpoint(large) {
+      flex: 1;
+    }
+
+    .testimonial {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: $testimonial-color;
+      border-radius: 10px;
+      min-height: 150px;
+      padding: 15px;
+      margin-bottom: 20px;
+
+      @include breakpoint(large) {
+        min-height: 183px;
+      }
+
+      &__header {
+        display: flex;
+        align-items: center;
+
+        .author-image {
+          min-height: 40px;
+          min-width: 40px;
+          border-radius: 50%;
+          margin-right: 20px;
+          position: relative;
+          z-index: 1;
+
+          @include breakpoint(large) {
+            min-height: 65px;
+            min-width: 65px;
+          }
+
+          &::before {
+            content: "";
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            position: absolute;
+            bottom: -3px;
+            right: -3px;
+            background-color: $primary-color;
+            z-index: -1;
+
+            @include breakpoint(large) {
+              min-height: 65px;
+              min-width: 65px;
+            }
+          }
+
+          img {
+            border-radius: 50%;
+            width: 100%;
+          }
+        }
+
+        .author-image + div {
+          margin-right: auto;
+
+          .author-name {
+            font-family: $heading-font;
+            letter-spacing: 2px;
+            font-size: 2.1rem;
+            color: $primary-color;
+            text-transform: uppercase;
+
+            @include breakpoint(large) {
+              font-size: 2.4rem;
+            }
+          }
+
+          .author-company {
+            font-size: 1.4rem;
+            color: rgba($color: #fff, $alpha: 0.5);
+
+            @include breakpoint(large) {
+              font-size: 1.8rem;
+            }
+          }
+        }
+      }
+
+      &__body {
+        font-size: 1.4rem;
+        max-width: 232px;
+
+        @include breakpoint(large) {
+          max-width: 400px;
+          font-size: 1.8rem;
+        }
+      }
+
+      &__footer {
+        font-size: 1.2rem;
+        color: rgba($color: #fff, $alpha: 0.5);
+
+        @include breakpoint(large) {
+          font-size: 1.4rem;
+        }
+      }
+
+      &:nth-child(2) {
+        @include breakpoint(large) {
+          transform: translateX(-140px);
+        }
+      }
+    }
+  }
+}
