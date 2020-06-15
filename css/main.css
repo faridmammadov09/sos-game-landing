@@ -1118,6 +1118,10 @@ body {
   }
 }
 
+.quotes {
+  background: url("/images/quotes-bg.jpg") center center/cover no-repeat;
+}
+
 @media screen and (min-width: 992px) {
   .quotes .container {
     display: -webkit-box;

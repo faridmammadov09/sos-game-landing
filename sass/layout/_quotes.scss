@@ -1,4 +1,6 @@
 .quotes {
+  background: url("/images/quotes-bg.jpg") center center / cover no-repeat;
+
   .container {
     @include breakpoint(large) {
       display: flex;
