@@ -585,6 +585,11 @@ body {
   font-weight: bold;
   margin-right: 6px;
   width: 25px;
+  cursor: pointer;
+}
+
+.header .right-side .language-dropdown #dropdownMenuButton:focus {
+  outline: none;
 }
 
 .header .right-side .language-dropdown .dropdown-menu {
