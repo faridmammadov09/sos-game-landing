@@ -554,6 +554,7 @@ body {
 @media screen and (min-width: 992px) {
   .header .nav {
     display: block;
+    margin-left: 100px;
   }
 }
 
@@ -1288,6 +1289,11 @@ body {
   }
 }
 
+.quotes .testimonials .testimonial__header .twitter-logo-wrapper i {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 2rem;
+}
+
 .quotes .testimonials .testimonial__body {
   font-size: 1.4rem;
   max-width: 232px;
@@ -1486,6 +1492,7 @@ body {
     -webkit-column-gap: 30px;
             column-gap: 30px;
     row-gap: 0;
+    margin-left: 100px;
   }
 }
 

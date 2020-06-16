@@ -119,6 +119,11 @@
             }
           }
         }
+
+        .twitter-logo-wrapper i {
+          color: rgba($color: #fff, $alpha: 0.3);
+          font-size: 2rem;
+        }
       }
 
       &__body {
