@@ -85,7 +85,8 @@
           display: block;
           transition: color 200ms ease;
 
-          &:hover {
+          &:hover,
+          &.active {
             color: $primary-color;
           }
         }

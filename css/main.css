@@ -609,7 +609,7 @@ body {
   transition: color 200ms ease;
 }
 
-.header .right-side .language-dropdown .dropdown-menu a:hover {
+.header .right-side .language-dropdown .dropdown-menu a:hover, .header .right-side .language-dropdown .dropdown-menu a.active {
   color: #ffb548;
 }
 
